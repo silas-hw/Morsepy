@@ -8,7 +8,7 @@ setup(
   author = 'silas-hw',                   
   author_email = 'silas.hayes.williams@gmail.com',      
   url = 'https://github.com/silas-hw/Morsepy',   
-  download_url = '',   
+  download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.1.zip',   
   keywords = ['morse', 'decrypt', 'encrypt'],   
   install_requires=[],
   classifiers=[
