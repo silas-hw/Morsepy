@@ -1,14 +1,23 @@
 from distutils.core import setup
+
+#get readmefile
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+  
 setup(
   name = 'morsepy',         
   packages = ['morsepy'],  
   version = '0.1',      
   license='MIT',       
   description = 'A morse decrypter and encrypter module for python',  
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'silas-hw',                   
   author_email = 'silas.hayes.williams@gmail.com',      
   url = 'https://github.com/silas-hw/Morsepy',   
-  download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.1.zip',   
+  download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.2.tar.gz',   
   keywords = ['morse', 'decrypt', 'encrypt'],   
   install_requires=[],
   classifiers=[
