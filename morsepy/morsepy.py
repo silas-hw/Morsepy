@@ -39,10 +39,18 @@ codec = {
     ',': '--..--',
     '?': '..--..',
     ':': '---...',
+    ';': '_._._.',
+    "'": '.----.',
+    '"': '.-..-.',
+    '(': '-.--.',
+    '(': '-.--.-',
     '/': '-..-.',
     '-': '-....-',
     '=': '-...-',
+    '+': '.-.-.',
     '!': '-.-.--',
+    '×': '-..-',
+    '@': '.--.-.',
     ' ':'/'
 }
 
@@ -63,7 +71,7 @@ class Morsepy():
             except KeyError:
                 raise ValueError(f' Character "{char}" is not currently supported by morsepy')
 
-        return cipher
+        return cipher.strip()
 
     @staticmethod
     def decrypt(str):
@@ -91,7 +99,7 @@ class Morsepy():
 
             cipher += ' '
 
-        return cipher
+        return cipher.strip()
 
 if __name__ == '__main__':
     #examples of encrypt and decrypt
