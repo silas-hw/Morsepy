@@ -1,4 +1,4 @@
-codec = {
+MORSE_DICT = {
     'a':'.-',
     'b':'-...',
     'c':'-.-.',
@@ -66,7 +66,7 @@ class Morsepy():
         cipher = ''
         for char in str:
             try:
-                cipher += codec[char]
+                cipher += MORSE_DICT[char]
                 cipher += ' '
             except KeyError:
                 raise ValueError(f' Character "{char}" is not currently supported by morsepy')
@@ -82,7 +82,7 @@ class Morsepy():
         but the same should be used every time a slash is placed, otherwise a SyntaxError will be raised
         """
 
-        cipher = ''
+        decipher = ''
         wordsplit = ' / ' if ' / ' in str else '/' #determines wether words should be split with / padded by whitespace or / not padded by whitespace
         wordlist = [word.split(' ') for word in str.split(wordsplit)] #gives list of 
         
@@ -90,16 +90,16 @@ class Morsepy():
         for charlist in wordlist:
             for char in charlist:
                 
-                if char not in codec.values():
+                if char not in MORSE_DICT.values():
                     raise SyntaxError(f' Morse character "{char}" does not exist')
                 
-                for letter, morse in codec.items():
+                for letter, morse in MORSE_DICT.items():
                     if morse == char:
-                        cipher += letter
+                        decipher += letter
 
-            cipher += ' '
+            decipher += ' '
 
-        return cipher.strip()
+        return decipher.strip()
 
 if __name__ == '__main__':
     #examples of encrypt and decrypt
