@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 #get readmefile
 from os import path
@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
   name = 'morsepy',         
   packages = ['morsepy'],  
-  version = '0.1',      
+  version = '0.2',      
   license='MIT',       
   description = 'A morse decrypter and encrypter module for python',  
   long_description=long_description,
