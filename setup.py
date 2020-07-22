@@ -19,7 +19,7 @@ setup(
   url = 'https://github.com/silas-hw/Morsepy',   
   download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.3.tar.gz',   
   keywords = ['morse', 'decrypt', 'encrypt'],   
-  install_requires=[],
+  install_requires=['winsound', 'time'],
   classifiers=[
     'Development Status :: 3 - Alpha',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
     'Intended Audience :: Developers',      # Define that your audience are developers
