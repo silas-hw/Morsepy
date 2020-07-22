@@ -107,6 +107,11 @@ class Morsepy():
     @classmethod
     def beep(cls, morse: str):
 
+        """
+            Outputs a series of varied length beeps for the morse of any english given,
+            this will only work on windows operating systems due to the winsound module being used
+        """
+
         for char in cls.encrypt(morse):
 
             if char == '.':
