@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
   name = 'morsepy',         
   packages = ['morsepy'],  
-  version = '0.3',      
+  version = '0.3.1',      
   license='MIT',       
   description = 'A morse decrypter and encrypter module for python',  
   long_description=long_description,
@@ -17,9 +17,9 @@ setup(
   author = 'silas-hw',                   
   author_email = 'silas.hayes.williams@gmail.com',      
   url = 'https://github.com/silas-hw/Morsepy',   
-  download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.3.tar.gz',   
+  download_url = 'https://github.com/silas-hw/Morsepy/archive/v0.3.1.tar.gz',   
   keywords = ['morse', 'decrypt', 'encrypt'],   
-  install_requires=['winsound', 'time'],
+  install_requires=[],
   classifiers=[
     'Development Status :: 3 - Alpha',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
     'Intended Audience :: Developers',      # Define that your audience are developers
