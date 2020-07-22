@@ -1,3 +1,6 @@
+import winsound
+import time
+
 MORSE_DICT = {
     'a':'.-',
     'b':'-...',
@@ -101,9 +104,28 @@ class Morsepy():
 
         return decipher.strip()
 
+    @classmethod
+    def beep(cls, morse: str):
+
+        for char in cls.encrypt(morse):
+
+            if char == '.':
+                winsound.Beep(500, 400)
+                time.sleep(0.5)
+            elif char == '-':
+                winsound.Beep(500, 800)
+                time.sleep(0.5)
+            elif char == '/':
+                time.sleep(1.5)
+            elif char == ' ':
+                time.sleep(1)
+
+
 if __name__ == '__main__':
     #examples of encrypt and decrypt
     print(Morsepy.encrypt('haha, brrr. lmao 1234!!'))
     print(Morsepy.decrypt('.... .- .... .- --..-- / -... .-. .-. .-. .-.-.- / .-.. -- .- --- / .---- ..--- ...-- ....- -.-.-- -.-.--'))
+
+    Morsepy.beep('hello world!') #beep hello world
 
     print(Morsepy.encrypt(input(">>> ")))
